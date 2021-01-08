@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="actexp"
+            type="in.techrova.kmmapplication.shared.data.TestActExp" />
+    <variable
+        name="job"
+        type="in.techrova.kmmapplication.shared.data.model.github.GitHubJob" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="5dp"
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            android:id="@+id/upcomecard"
+
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/upcoming_profile_lay"
+                    android:layout_height="wrap_content" >
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/profile"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/upcoming_image"
+                        android:imageUrl="@{job.company_logo}"
+                        />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/upcoming_image"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/upcoming_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="SOPHIA CHARLOTTE"
+                            android:text="@{job.title}"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Physics"
+                            android:text="@{job.type}"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:id="@+id/sep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/upcoming_profile_lay"
+                    android:background="#CDCDCD"
+                    />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/sep1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="10dp"
+                    android:text="@{job.how_to_apply}"
+                    tools:text="To make a circular ImageView add CircularImageView in your layout " />
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView> </LinearLayout>
+</layout>

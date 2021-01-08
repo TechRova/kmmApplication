@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:id="@+id/header"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:id="@+id/profpic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/profpic"
+            android:text="Pawel Kadysz"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:text="6 hours ago"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/feedimg"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:src="@drawable/feed_image"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/header"
+        android:scaleType="centerCrop"
+        android:background="@drawable/border_rounded"
+        android:outlineProvider="background"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/feedimg"
+        android:layout_marginTop="10dp"
+        android:text="Course Intro"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feedimg"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/iconlay"
+        >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_baseline_favorite_border_24"
+    android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_border_24"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_folder_open_24"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_marginEnd="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="12dp"
+        android:textStyle="bold"
+        android:text="Last Day of Summer"
+        android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:layout_below="@id/iconlay"
+        android:id="@+id/title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="textStart"
+        android:text="Here are the conference related notifications that callback is invoked for. Please check the conference.html for proper usage"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:id="@+id/desc"
+        android:layout_below="@id/title"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:text="VIEW"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+</RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

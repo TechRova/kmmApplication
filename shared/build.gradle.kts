@@ -37,7 +37,7 @@ kotlin {
                     }
                 }*/
 
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+               implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
             }
         }
         val commonTest by getting {
@@ -50,7 +50,9 @@ kotlin {
             dependencies {
                 implementation("com.google.android.material:material:1.2.0")
                 implementation("io.ktor:ktor-client-android:1.5.0")
-              //  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-android:1.4.2")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+
+                //  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-android:1.4.2")
             }
         }
         val androidTest by getting {
